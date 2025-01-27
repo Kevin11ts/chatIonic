@@ -1,0 +1,53 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/settings"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list lines="none">
+    <div class="ion-text-center">
+      <ion-avatar class="profile-avatar">
+        <img alt [src]="userAvatar" />
+      </ion-avatar>
+      <ion-button   color="success"  class="camera-button" shape="round">
+        <ion-icon name="camera-outline"></ion-icon>
+      </ion-button>   
+    </div>
+
+    
+    <ion-item>
+      <ion-icon slot="start"name="person-outline" syze="large"></ion-icon>
+      <ion-label>
+        <h2>Nombre</h2>
+        <p>{{ userName }}</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon slot="start" name="information-circle-outline" syze="large"></ion-icon>
+      <ion-label>
+        <h2>Info.</h2>
+        <p>{{ userInfo }}</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon slot="start" name="call-outline" syze="large"></ion-icon>
+      <ion-label>
+        <h2>Teléfono</h2>
+        <p>{{ userPhone }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<style>
+
+  ion-list {
+    --ion-item-border-color: transparent; /* Elimina la raya de los ítems */
+  }
+</style>

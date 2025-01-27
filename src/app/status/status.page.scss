@@ -1,11 +1,35 @@
 ion-avatar {
-    border: 2px solid var(--ion-color-primary);
-    border-radius: 50%;
-    overflow: hidden;
-  }
-  ion-item-divider {
-    font-size: 0.9rem;
-    font-weight: bold;
-    color: var(--ion-color-medium);
-  }
-  
+  border: 2px solid #09c359; /* Definir directamente el color o usar una variable ya definida */
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+ion-item[name="vistos"] ion-avatar {
+  border: 2px solid #757575; /* Gris */
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+ion-item[name="miEstado"] ion-avatar {
+  border: 2px solid #757575; /* Gris */
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.divider-vistos {
+  border: 2px solid #09c359; /* Definir directamente el color o usar una variable ya definida */
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+ion-item-divider {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--ion-color-medium); /* Variable Ion correcta */
+}
+
+
+ion-icon[name="camera"] {
+  font-size: 30px; // Tamaño del ícono (más grande que el botón)
+  color: rgb(0, 0, 0); // Color del ícono para que destaque
+}

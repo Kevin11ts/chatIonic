@@ -18,7 +18,7 @@
 <ion-content [fullscreen]="true">
   <ion-list>
     <!-- Mi Estado -->
-    <ion-item>
+    <ion-item name="miEstado">
       <ion-avatar slot="start">
         <img src="https://ionicframework.com/docs/img/demos/avatar.svg" />
       </ion-avatar>
@@ -47,9 +47,9 @@
 
     <!-- Vistos -->
     <ion-item-divider>
-      <ion-label name = vistos>Vistos</ion-label>
+      <ion-label>Vistos</ion-label>
     </ion-item-divider>
-    <ion-item *ngFor="let estado of vistos">
+    <ion-item *ngFor="let estado of vistos" name="vistos">
       <ion-avatar slot="start">
         <img [src]="estado.image" />
       </ion-avatar>
@@ -59,14 +59,24 @@
       </ion-label>
     </ion-item>
   </ion-list>
-
+  
+  
   <!-- Botón flotante -->
-  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button (click)="addEstado()">
-      <ion-icon name="camera-outline"></ion-icon>
-    </ion-fab-button>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" style="bottom: 5.5rem; ">
+    <ion-button style="--background: #757575; --border-radius: 15px; width: 56px; height: 56px;">
+      <ion-icon name="pencil-sharp"  style="font-size: 40px;"></ion-icon>
+    </ion-button>
+  </ion-fab>  
+  
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" >
+    <ion-button (click)="addEstado()" style="--background: #09c359; --border-radius: 15px; width: 56px; height: 56px;">
+      <ion-icon name="camera"></ion-icon>
+    </ion-button>
   </ion-fab>
-</ion-content>
+  
+  
+</ion-content>  
+
 
 <ion-tab-bar slot="bottom">
   <ion-tab-button tab="home">

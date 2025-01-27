@@ -1,0 +1,71 @@
+
+  
+  
+  .profile-avatar {
+    width: 128px;
+    height: 128px;
+    margin: 16px auto;
+  }
+  
+  .camera-button {
+    position: relative;
+    bottom: 50px;
+    left: 40px;
+    --background: |#09c359; // Color de fondo del botón
+    --size: 50px; // Tamaño del botón redondo
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%; // Forma redonda
+
+  }
+  
+  /* Solo aplica al ícono de la cámara */
+  ion-icon[name="camera-outline"] {
+    font-size: 35px; // Tamaño del ícono (más grande que el botón)
+    position: absolute; // Se asegura de estar centrado sobre el botón
+    color: rgb(0, 0, 0); // Color del ícono para que destaque
+    transform: translate(0, 0); // Ajuste para mantener el ícono centrado
+  }
+
+  /*ion-icon {
+    font-size: 35px; 
+  }
+    */
+  
+ 
+  
+  
+  /*.camera-button {
+    position: relative;
+    bottom: 50px;
+    left: 40px;
+    --background: #32CD32;
+    --size: 50px; // Tamaño del botón
+    width: var(--size); // Asegura proporción redonda
+    height: var(--size);
+    border-radius: 50%; // Mantén la forma redonda
+    padding: 0; // Sin relleno adicional
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    ion-icon {
+      font-size: 24px; // Ajusta el tamaño del ícono
+    }
+  }
+  
+ /* .camera-button {
+   
+    padding: 0; // Asegura que no haya espacio interno
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    ion-icon {
+      font-size: 36px; // Ajusta el tamaño del ícono si es necesario
+    }
+  }
+    */
+  
+  
+  

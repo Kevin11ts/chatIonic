@@ -35,3 +35,27 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+
+body {
+    background-color: rgba(0, 0, 0, 0);
+    color: white;  // Esto asegura que el texto sea visible sobre el fondo negro
+  }
+
+ ion-searchbar::part(icon) {
+    content: ''; /* Remueve cualquier contenido existente */
+    background-image: url('assets/icon/meta.png'); /* Ruta a tu imagen */
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block; /* Asegúrate de que se muestre como bloque */
+    width: 24px; /* Ajusta al tamaño de tu imagen */
+    height: 24px;
+    margin-right: 8px; /* Opcional: ajusta la separación */
+}
+
+
+
+  
+  

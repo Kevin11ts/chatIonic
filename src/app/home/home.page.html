@@ -2,25 +2,26 @@
   <ion-toolbar>
     <ion-buttons slot="secondary">
       <ion-button>
-        <ion-icon slot="icon-only" name="camera-outline"  size="large"></ion-icon>
+        <ion-icon slot="icon-only" name="camera-outline" size="large"></ion-icon>
       </ion-button>
     </ion-buttons>
     <ion-buttons slot="primary">
-      <ion-button>
-        <ion-icon slot="icon-only" ios="ellipsis-horizontal"
-          md="ellipsis-vertical"></ion-icon>
+      <ion-button (click)="openPopover($event)">
+        <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
       </ion-button>
     </ion-buttons>
     <ion-title>Whatsapp</ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-searchbar placeholder="Custom Placeholder"></ion-searchbar>
 
 <ion-content [fullscreen]="true">
-  
-
   <ion-content>
+
+
     <ion-list>
+      <ion-searchbar placeholder="Pregunta a Meta AI o buscar"></ion-searchbar>
+    
+
       <ion-item *ngFor="let dsm of chats" [button]="true"> <ion-avatar aria-hidden="true" slot="start">
           <img alt [src]="dsm.avatar" />
         </ion-avatar>
@@ -35,44 +36,14 @@
     </ion-list>
   </ion-content>
 
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-button style="--background: #09c359; --border-radius: 15px;" >
+      <ion-icon name="chatbox-ellipses" ></ion-icon>
+    </ion-button>
+  </ion-fab>  
+
 </ion-content>
 
-<ion-tab tab="radio">
-  <div id="radio-page">
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Radio</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
-      <div class="example-content">Radio content</div>
-    </ion-content>
-  </div>
-</ion-tab>
-<ion-tab tab="library">
-  <div id="library-page">
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Library</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
-      <div class="example-content">Library content</div>
-    </ion-content>
-  </div>
-</ion-tab>
-<ion-tab tab="search">
-  <div id="search-page">
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Search</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
-      <div class="example-content">Search content</div>
-    </ion-content>
-  </div>
-</ion-tab>
 
 <ion-tab-bar slot="bottom">
   <ion-tab-button tab="home">
@@ -86,7 +57,7 @@
   </ion-tab-button>
 
   <ion-tab-button tab="library">
-    <ion-icon name="call-outline"></ion-icon>
+    <ion-icon name="call-outline" routerLink="/settings"></ion-icon>
     LLamadas
   </ion-tab-button>
 </ion-tab-bar>

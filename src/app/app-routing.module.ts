@@ -15,6 +15,14 @@ const routes: Routes = [
     path: 'status',
     loadChildren: () => import('./status/status.module').then( m => m.StatusPageModule)
   },
+  {
+    path: 'profile',
+    loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
+  },
+  {
+    path: 'settings',
+    loadChildren: () => import('./settings/settings.module').then( m => m.SettingsPageModule)
+  },
 ];
 
 @NgModule({

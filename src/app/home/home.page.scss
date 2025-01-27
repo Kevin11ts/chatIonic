@@ -1,3 +1,8 @@
+ion-content {
+  --background: #000;
+  color: #fff;
+}
+
 #container {
   text-align: center;
 
@@ -25,3 +30,23 @@
 #container a {
   text-decoration: none;
 }
+
+ion-searchbar {
+  --background: #f0f0f047; /* Color gris de fondo */
+  --border-radius: 12px; /* Bordes redondeados */
+  --box-shadow: none; /* Eliminar sombra por defecto (opcional) */
+}
+
+ion-icon[name="chatbox-ellipses"] {
+  font-size: 30px; // Tamaño del ícono (más grande que el botón)
+  color: rgb(0, 0, 0); // Color del ícono para que destaque
+}
+
+
+
+
+
+
+
+
+

@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { MenuController, PopoverController } from '@ionic/angular';
+import { PopoverMenuComponent } from '../popover-menu/popover-menu.component'; // Importa el componente PopoverMenu
+
 
 @Component({
   selector: 'app-home',
@@ -6,8 +9,10 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
   standalone: false,
 })
-export class HomePage {
+  export class HomePage {
+    popoverEvent: any;
 
+    
   chats = [
     {
       name: 'John Doe',
@@ -189,7 +194,23 @@ export class HomePage {
       time: '7:50 PM',
       avatar: 'https://ionicframework.com/docs/img/demos/avatar.svg',
     },
+  
   ];
-  constructor() {}
 
+  constructor(private popoverController: PopoverController) {}
+
+  // Método para abrir el popover
+  async openPopover(event: any) {
+    const popover = await this.popoverController.create({
+      component: PopoverMenuComponent,  // Asegúrate de crear un componente para el popover
+      event: event,
+      translucent: true
+    });
+    return await popover.present();
+  }
+
+  // Método que se ejecuta cuando se selecciona una opción del popover
+  optionSelected(option: string) {
+    console.log('Opción seleccionada: ' + option);
+  }
 }

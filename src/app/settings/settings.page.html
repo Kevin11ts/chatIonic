@@ -1,0 +1,103 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Ajustes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item button [routerLink]="'/profile'"> <!-- Cambia la ruta de destino aquí -->
+      <ion-avatar slot="start">
+        <img src="https://ionicframework.com/docs/img/demos/avatar.svg" alt="Perfil" />
+      </ion-avatar>
+      <ion-label>
+        <h2>Kevin</h2>
+        <p>Kevinnnnnnnnnn</p>
+      </ion-label>
+      <ion-icon style="color: #09c359;" name="qr-code" slot="end"></ion-icon>
+      <ion-icon style="color: #09c359;" name="add-circle-outline" slot="end"></ion-icon>
+    </ion-item>
+
+    
+
+
+    <!-- Opciones -->
+    <ion-list lines="none">
+    <ion-item>
+      <ion-icon name="key" slot="start"></ion-icon>
+      <ion-label>
+        <h2>Cuenta</h2>
+        <p>Notificaciones de seguridad, cambiar número</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="lock-closed" slot="start"></ion-icon>
+      <ion-label>
+        <h2>Privacidad</h2>
+        <p>Bloquear contactos, mensajes temporales</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="happy" slot="start"></ion-icon>
+      <ion-label>
+        <h2>Avatar</h2>
+        <p>Crear, editar, administrar foto del perfil</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="list" slot="start"></ion-icon>
+      <ion-label>
+        <h2>Listas</h2>
+        <p>Administrar personas y grupos</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="chatbubbles" slot="start"></ion-icon>
+      <ion-label>
+        <h2>Chats</h2>
+        <p>Tema, fondos de pantalla, historial de chat</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="notifications" slot="start"></ion-icon>
+      <ion-label>
+        <h2>Notificaciones</h2>
+        <p>Tonós de mensajes, grupos y llamadas</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="cloud" slot="start"></ion-icon>
+      <ion-label>
+        <h2>Almacenamiento y datos</h2>
+        <p>Uso de red, descarga automática</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="globe" slot="start"></ion-icon>
+      <ion-label>
+        <h2>Idioma de la aplicación</h2>
+        <p>Español (idioma del dispositivo)</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="help-circle" slot="start"></ion-icon>
+      <ion-label>
+        <h2>Ayuda</h2>
+        <p>Centro de ayuda, contáctanos, política de privacidad</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-list>
+</ion-content>
